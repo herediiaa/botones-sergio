@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .container {
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        height: 500px;
+        width: 90%;
+        background-color: #d1db6c /*brown*/;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        border-radius: 0.25rem;
+      }
+      .btn {
+        background: transparent;
+        color: #222;
+        padding: 0.375rem 0.75rem;
+        letter-spacing: 0.1rem; /**/
+        display: inline-block;
+        transition: all 0.3s linear; /*0.3 linear*/
+        font-size: 1rem;
+        border: 2px solid #222;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 0.25rem; /*0.25remmmmmm*/
+        margin: 0.5rem;
+      }
+      .btn:hover {
+        color: white;
+        background: #222;
+      }
+      .inputBox {
+        position: relative;
+        width: 250px;
+      }
+      .inputBox input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #222;
+        background-color: #d1db6c;
+        outline: none;
+        font-size: 1rem;
+
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      .inputBox span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        pointer-events: none;
+        font-size: 1rem;
+        color: #222;
+        text-transform: uppercase;
+        transition: 0.5s;
+      }
+      .inputBox input:valid ~ span,
+      .inputBox input:focus ~ span {
+        color: hsl(205, 63%, 48%);
+        transform: translateX(6px) translateY(-35px);
+        padding: 0 8px;
+        background: #d1db6c;
+      }
+                
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="cajas">
+        <div class="inputBox">
+          <input type="text" required="required" id="telefono"/>
+          <span>Telefono</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" id="email" />
+          <span>Email</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" id="telefono"/>
+          <span>titular</span>
+        </div>
+      </div>
+
+      <div class="btns-container">
+        <button class="btn">Paxs</button>
+        <button class="btn">Reserva</button>
+        <button class="btn">Imprimir Cotizacion</button>
+        <button class="btn">Voucher</button>
+        <button class="btn">Anterior</button>
+        <button class="btn">siguiente</button>
+        <button class="btn">Ver Observacion</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
